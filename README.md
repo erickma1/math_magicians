@@ -105,14 +105,12 @@ npx eslint .
 
 Install this project with:
 
-<!--
 Example command:
 
 ```sh
   cd my-project
   gem install
 ```
---->
 
 ### Usage
 
