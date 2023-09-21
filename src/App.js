@@ -1,15 +1,36 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
 import Calculator from './components/Calculator';
-import Quotes from './quote/Quote';
+import Quote from './logic/Quote';
 
-function App() {
-  return (
-    <div className="container mt-2">
-      <h1>Calculator</h1>
-      <Calculator />
-      <Quotes />
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <>
+        <Router>
+          <NavBar />
+          <section className="content">
+            <Routes>
+              <Route path="/math-magicians" element={<Home />} />
+              <Route
+                path="/Calculator"
+                element={<Calculator className="Calculator" />}
+              />
+              <Route path="/Quote" element={<Quote />} />
+            </Routes>
+          </section>
+        </Router>
+      </>
+    );
+  }
 }
 
 export default App;
