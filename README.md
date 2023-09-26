@@ -136,7 +136,6 @@ To run the project, execute the "index.html" file in your browser
 
 - **[Make simple calculations]**
 - **[Connect to an API within a functional component]**
-- **[Show different UI outputs depending on the component state]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
